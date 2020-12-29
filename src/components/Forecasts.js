@@ -1,8 +1,8 @@
 import React from 'react';
-import '../assets/styles/components/Info__forecast.scss';
+import '../assets/styles/components/Forecasts.scss';
 import cloud from '../assets/images/cloud.png';
 
-const Info__forecast = () => (
+const Forecasts = () => (
   <>
     <div className='title'>
       <h2>
@@ -65,4 +65,4 @@ const Info__forecast = () => (
   </>
 );
 
-export default Info__forecast;
+export default Forecasts;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import '../assets/styles/components/Info__locations.scss';
+import '../assets/styles/components/Location.scss';
 
 import cloud from '../assets/images/cloud.png';
 import location from '../assets/images/Location.jpg';
 
-const Info__locations = () => (
+const Location = () => (
   <section className='info__locations-container'>
     <article className='box' id='francia'>
       <div className='data__important'>
@@ -54,4 +54,4 @@ const Info__locations = () => (
   </section>
 );
 
-export default Info__locations;
+export default Location;

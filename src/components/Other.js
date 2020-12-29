@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../assets/styles/components/Info__others.scss';
+import '../assets/styles/components/Other.scss';
 
 import images1 from '../assets/images/1.jpg';
 import images2 from '../assets/images/2.jpg';
@@ -8,7 +8,7 @@ import images3 from '../assets/images/3.jpg';
 import museum from '../assets/images/museum.jpg';
 import rosa from '../assets/images/rosa.jpg';
 
-const Info__others = () => (
+const Other = () => (
   <section className='container__info'>
     <article className='reviews'>
       <p>+ top Reviews</p>
@@ -49,4 +49,4 @@ const Info__others = () => (
   </section>
 );
 
-export default Info__others;
+export default Other;

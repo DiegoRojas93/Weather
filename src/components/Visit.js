@@ -1,10 +1,10 @@
 import React from 'react';
 
-import '../assets/styles/components/Info__visit.scss';
+import '../assets/styles/components/Visit.scss';
 
 import singopore from '../assets/images/singopore.jpg';
 
-const Info__visit = () => (
+const Visit = () => (
   <>
     <div className='title'>
       <h2>
@@ -15,7 +15,7 @@ const Info__visit = () => (
     <div className='image'>
       <article className='box__left'>
         <div className='icon'>
-          <i className='fas fa-map-marker-alt'></i>
+          <i className='fas fa-map-marker-alt' />
         </div>
         <div className='text'>
           <span>Arab street</span>
@@ -27,4 +27,4 @@ const Info__visit = () => (
   </>
 );
 
-export default Info__visit;
+export default Visit;

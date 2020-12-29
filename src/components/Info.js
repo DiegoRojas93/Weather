@@ -1,24 +1,24 @@
 import React from 'react';
 import '../assets/styles/components/Info.scss';
 
-import Info__forecast from './Info__forecast.js';
-import Info__locations from './Info__locations';
-import Info__visit from './Info__visit';
-import Info__others from './Info__others';
+import Forecasts from './Forecasts';
+import LocationInformation from './Location';
+import Visit from './Visit';
+import Other from './Other';
 
 const Info = () => (
   <article className='info'>
     <div className='info__forecast info__items'>
-      <Info__forecast/>
+      <Forecasts />
     </div>
     <div className='info__locations info__items'>
-      <Info__locations />
+      <LocationInformation />
     </div>
     <div className='info__visit info__items'>
-      <Info__visit />
+      <Visit />
     </div>
     <div className='info__others info__items'>
-      <Info__others />
+      <Other />
     </div>
   </article>
 );
