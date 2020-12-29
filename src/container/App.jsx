@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import '../assets/styles/App.scss';
-import cloud from '../assets/images/cloud.png';
 import banner from '../assets/images/banner__image.jpg';
 
 import Info from '../components/Info';
@@ -12,7 +11,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      weather: [],
+      BogotaWeather: {},
+      ParisWeather: {},
       isFetch: false,
     };
   };
@@ -24,32 +24,41 @@ class App extends Component {
 
     fetch(`${CORS}/${URL}`)
       .then((response) => response.json())
-      .then((data) => this.setState({ weather: data.list, isFetch: true }));
+      .then((data) => this.setState({ BogotaWeather: data.list[0], ParisWeather: data.list[1], isFetch: true }));
   }
 
   render() {
-    const { isFetch, weather } = this.state;
+    const { isFetch, BogotaWeather, ParisWeather } = this.state;
     if (isFetch === true) {
-      console.log('data:', weather);
+      console.log('data:', BogotaWeather);
     };
 
     return (
       <section className='container'>
-        <article className='banner'>
-          <img src={banner} alt='banner' />
-        </article>
+        { isFetch === true ?
+          (
+            <>
+              <article className='banner'>
+                <img src={banner} alt='banner' />
+              </article>
 
-        <Info />
+              <Info />
 
-        <section className='main__information'>
-          <article className='main__information-icon'>
+              <section className='main__information'>
+                <article className='main__information-icon'>
 
-            <img src={cloud} alt='icon' />
-          </article>
-          <article className='main__information-temperature'>
-            <h1>30 C°</h1>
-          </article>
-        </section>
+                  <img src={`http://openweathermap.org/img/wn/${BogotaWeather.weather[0].icon}@2x.png`} alt='icon' />
+                </article>
+                <article className='main__information-temperature'>
+                  <h1>{`${BogotaWeather.main.temp} C°`}</h1>
+                </article>
+              </section>
+            </>
+          ) :
+          (
+            <h1>Loading ...</h1>
+          )
+        }
       </section>
     );
   }
