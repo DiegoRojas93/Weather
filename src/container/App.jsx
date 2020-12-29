@@ -42,7 +42,7 @@ class App extends Component {
                 <img src={banner} alt='banner' />
               </article>
 
-              <Info />
+              <Info Bogota={BogotaWeather} Paris={ParisWeather} />
 
               <section className='main__information'>
                 <article className='main__information-icon'>

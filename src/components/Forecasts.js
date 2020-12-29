@@ -5,6 +5,8 @@ import cloud from '../assets/images/cloud.png';
 class Forecasts extends Component {
   render() {
 
+    const { Bogota } = this.props;
+
     return (
       <>
         <div className='title'>
