@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/styles/components/Info.scss';
 import Info__forecast from './Info__forecast.js';
+import Info__locations from './Info__locations';
 
 const Info = () => (
   <article className='info'>
@@ -8,6 +9,7 @@ const Info = () => (
       <Info__forecast/>
     </div>
     <div className='info__locations info__items'>
+      <Info__locations />
     </div>
     <div className='info__visit info__items'>
 

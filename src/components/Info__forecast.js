@@ -58,7 +58,7 @@ const Info__forecast = () => (
           </div>
         </div>
         <div className='box__average-temperature'>
-          <h2>32° / 23°</h2>
+          <h1>32° / 23°</h1>
         </div>
       </article>
     </div>
