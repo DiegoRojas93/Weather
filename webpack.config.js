@@ -1,6 +1,7 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const loader = require('sass-loader');
 
 module.exports = {
   entry: './src/Index.js',
@@ -25,6 +26,17 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|gif|jpg|webp)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/images/[hash].[ext]',
+            },
+          },
+        ],
       },
     ],
   },
