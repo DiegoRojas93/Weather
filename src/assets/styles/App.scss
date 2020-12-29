@@ -1,3 +1,133 @@
-h1{
-	color: rgb(0, 60, 255);
+@import '_Global.scss';
+@import '_style.scss';
+
+body {
+	max-height: 100%;
+	max-width: 100%;
+	height: 100%;
+	width: 100%;
+	background-color: $color;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+	height: 100%;
+	width: 100%;
+	background-color: $color-cuaternario;
+	box-shadow: 2rem 2rem 8rem 0px #BFBFC4;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.main__information{
+	height: 20Vh;
+	width: 60Vw;
+	position: absolute;
+	top: 50vh;
+	z-index: 1;
+	left: calc(50% - 30Vw);
+	display: flex;
+	box-shadow: 1rem 3rem 6rem 0px #0000008c;
+	border-radius: 2rem 2rem 1rem 1rem;
+	overflow: hidden;
+
+	&-icon, &-temperature{
+		width: 50%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&-icon{
+		background-color: $color-terciario;
+		padding: 1rem;
+	}
+
+	&-temperature{
+		background-color: $color-secundario;
+	}
+}
+
+.banner{
+	height: 75%;
+	max-height: 75Vh;
+	width: 100%;
+	border-radius: 1rem;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	& img{
+		object-fit: cover;
+	}
+}
+
+
+@media screen and (min-width:530px){
+	body{
+		width: 100Vw;
+		height: 250Vh;
+		max-height: 250vh;
+		max-width: 100Vw;
+		padding: 2rem;
+	}
+
+	.container{
+		width: calc(100% - 4rem);
+		padding: 2rem;
+	}
+
+	.main__information{
+		top: 10vh;
+		left: 5rem;
+		height: 25vh;
+		width: 15vw;
+		display: flex;
+		flex-direction: column;
+
+		&-icon, &-temperature{
+			width: 100%;
+			height: 50%;
+		}
+	}
+
+	.banner{
+		height: 25%;
+		border-radius: 2rem;
+	}
+}
+
+@media screen and (min-width:1023px){
+	body{
+		max-height: 100vh;
+		max-width: 100Vw;
+		padding: 4rem 20rem;
+	}
+
+	.container{
+		padding: 4rem;
+		border-radius: 2rem;
+	}
+
+	.main__information{
+		top: 13vh;
+		left: 0rem;
+		border-radius: 2rem;
+		width: 8vw;
+		height: 20vh;
+		width: 6vw;
+	}
+
+	.banner{
+		height: 50%;
+	}
 }
