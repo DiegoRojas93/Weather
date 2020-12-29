@@ -1,9 +1,10 @@
 import React from 'react';
 
+import '../assets/styles/App.scss';
+
 const App = () => (
   <section>
     <h1>Hello world!</h1>
-    <img src='' alt='logo' />
   </section>
 );
 
