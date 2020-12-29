@@ -1,0 +1,155 @@
+@import '../style';
+
+.container__info{
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-rows: calc(4rem + 28px) repeat(2, 1fr);
+	gap: 2rem;
+
+	& .reviews, & .images{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 2rem 1rem;
+	}
+
+	& .museum, & .images{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+		overflow: hidden;
+		border-radius: 2rem;
+		position: relative;
+	}
+
+	& .images{
+
+		& img{
+			height: 100%;
+		}
+
+		& .box{
+			height: 100%;
+			width: 33.3%;
+			position: absolute;
+			left: 66.6%;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: $color-secundario;
+			border-radius: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 90%;
+
+			& h1 {
+				color: $color-cuaternario;
+				font-size: 5rem;
+			}
+		}
+	}
+}
+
+.users{
+	height: 100%;
+	width: 40%;
+	border-radius: 1rem;
+	display: flex;
+	justify-content: space-between;
+
+	& .figure{
+		width: 3rem;
+		height: 100%;
+		background-color: $color-secundario;
+		border: 1px solid $color-cuaternario;
+		border-radius: 0.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+
+		& span{
+			color: $color-cuaternario;
+		}
+
+		& img{
+			height: 100%;
+			width: auto;
+		}
+	}
+}
+
+.box__left {
+	width: 40%;
+	height: 30%;
+	max-width: 20rem;
+	max-height: 15rem;
+	position: absolute;
+	left: 2rem;
+	top: 2rem;
+	display: flex;
+
+	& .icon, & .text{
+		width: 50%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	& .text {
+		flex-direction: column;
+
+		& span {
+			color: $color-cuaternario;
+			font-size: 1.6rem;
+		}
+	}
+}
+
+.fa-map-marker-alt{
+	font-size: 3rem;
+	color: $color-cuaternario;
+}
+
+@media screen and (min-width: 1023px){
+	.container__info{
+		grid-template-rows: calc(2.5rem + 28px) minmax(3rem, 8rem) auto;
+		gap: 0rem;
+
+		& .reviews{
+			text-align: left;
+			margin: 0 0 2.5rem 0;
+
+			& p{
+				color: gray;
+				font-size: 1rem;
+				font-weight: 100;
+			}
+		}
+
+		& .museum{
+			margin: 0 0 2.5rem 0;
+		}
+	}
+
+	.users{
+		width: 50%;
+	}
+
+	.box__left {
+		left: 0.5rem;
+		top: 1.5rem;
+
+		& .text span{
+			font-size: 1rem;
+		}
+	}
+
+	.fa-map-marker-alt{
+		font-size: 1rem;
+	}
+}
