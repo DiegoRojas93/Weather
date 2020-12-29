@@ -15,7 +15,7 @@ const Info__locations = () => (
         <section className='general'>
           <article className='title'><h1>12 C°</h1></article>
           <article className='country'>
-            <h2>Paris</h2>
+            <h3>Paris</h3>
             <p>Francia</p>
           </article>
         </section>
@@ -36,7 +36,7 @@ const Info__locations = () => (
         <section className='general'>
           <article className='title'><h1>12 C°</h1></article>
           <article className='country'>
-            <h2>Paris</h2>
+            <h3>Paris</h3>
             <p>Francia</p>
           </article>
         </section>

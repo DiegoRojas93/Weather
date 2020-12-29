@@ -4,7 +4,7 @@ import '../assets/styles/App.scss';
 import cloud from '../assets/images/cloud.png';
 import banner from '../assets/images/banner__image.jpg';
 
-import Info from '../components/Info'
+import Info from '../components/Info';
 
 const App = () => (
   <section className='container'>
