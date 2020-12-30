@@ -34,7 +34,8 @@ class Forecasts extends Component {
 
     // xhr.send();
 
-    fetch('http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3')
+    // fetch('http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3')
+    fetch('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3')
       .then((RESPONSE) => RESPONSE.json())
       .then((data) => this.setState({ climates: data.list }));
   };
