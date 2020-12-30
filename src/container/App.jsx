@@ -29,9 +29,6 @@ class App extends Component {
 
   render() {
     const { isFetch, BogotaWeather, ParisWeather } = this.state;
-    if (isFetch === true) {
-      console.log('data:', BogotaWeather);
-    };
 
     return (
       <section className='container'>

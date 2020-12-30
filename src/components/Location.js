@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import '../assets/styles/components/Location.scss';
 
-import cloud from '../assets/images/cloud.png';
 import location from '../assets/images/Location.jpg';
 
 class Location extends Component {
@@ -10,7 +9,6 @@ class Location extends Component {
   render() {
     const { Paris } = this.props;
 
-    console.log('Paris: ', Paris);
     return (
       <section className='info__locations-container'>
         <article className='box' id='francia'>
