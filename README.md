@@ -41,11 +41,9 @@ npm install
 
 ## Despliegue 📦
 
-podies ver el despliege el en siguiente enlace
+Puedes ver el despliege en el siguente [enlace.](http://diegorojas93.github.io/Weather "enlace.")
 
 ## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * **React** - Libreria usada
 * **Sass** - Framework usado
