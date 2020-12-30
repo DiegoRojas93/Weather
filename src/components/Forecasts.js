@@ -8,15 +8,31 @@ class Forecasts extends Component {
 
     this.state = {
       climates: [],
-      isFetch: false,
       days: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
     };
   };
 
   componentDidMount() {
-    fetch('http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3')
-      .then((response) => response.json())
-      .then((data) => this.setState({ climates: data.list, isFetch: true }));
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('readystatechange', (e) => {
+
+      if (xhr.readyState !== 4) return;
+
+      if (xhr.status >= 200 && xhr.status < 300) {
+
+        const data = JSON.parse(xhr.responseText);
+
+        this.setState({ climates: data.list });
+
+      } else {
+        console.log('error');
+      }
+    });
+
+    xhr.open('GET', 'http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3');
+
+    xhr.send();
   };
 
   obtenerDia(info) {
@@ -25,18 +41,12 @@ class Forecasts extends Component {
     const date = new Date(info);
     const day = date.getDay();
 
-    console.log(days[day]);
-
     return days[day];
   };
 
   render() {
 
-    const { isFetch, climates } = this.state;
-
-    if (isFetch === true) {
-      console.log(climates);
-    }
+    const { climates } = this.state;
 
     const BOXS = climates.map((climate, index) => {
       return (

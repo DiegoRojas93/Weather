@@ -22,9 +22,26 @@ class App extends Component {
     const URL = 'api.openweathermap.org/data/2.5/group?id=3688685,6269531&units=metric&lang=es&appid=35810155ee96c6e88a98b4d0f6c47ee7';
     const CORS = 'https://cors-anywhere.herokuapp.com';
 
-    fetch(`${CORS}/${URL}`)
-      .then((response) => response.json())
-      .then((data) => this.setState({ BogotaWeather: data.list[0], ParisWeather: data.list[1], isFetch: true }));
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('readystatechange', (e) => {
+
+      if (xhr.readyState !== 4) return;
+
+      if (xhr.status >= 200 && xhr.status < 300) {
+
+        const data = JSON.parse(xhr.responseText);
+
+        this.setState({ BogotaWeather: data.list[0], ParisWeather: data.list[1], isFetch: true });
+
+      } else {
+        console.log('error');
+      }
+    });
+
+    xhr.open('GET', `${CORS}/${URL}`);
+
+    xhr.send();
   }
 
   render() {
