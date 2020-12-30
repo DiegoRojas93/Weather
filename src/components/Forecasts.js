@@ -13,26 +13,30 @@ class Forecasts extends Component {
   };
 
   componentDidMount() {
-    const xhr = new XMLHttpRequest();
+    // const xhr = new XMLHttpRequest();
 
-    xhr.addEventListener('readystatechange', (e) => {
+    // xhr.addEventListener('readystatechange', (e) => {
 
-      if (xhr.readyState !== 4) return;
+    //   if (xhr.readyState !== 4) return;
 
-      if (xhr.status >= 200 && xhr.status < 300) {
+    //   if (xhr.status >= 200 && xhr.status < 300) {
 
-        const data = JSON.parse(xhr.responseText);
+    //     const data = JSON.parse(xhr.responseText);
 
-        this.setState({ climates: data.list });
+    //     this.setState({ climates: data.list });
 
-      } else {
-        console.log('error');
-      }
-    });
+    //   } else {
+    //     console.log('error');
+    //   }
+    // });
 
-    xhr.open('GET', 'http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3');
+    // xhr.open('GET', 'http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3');
 
-    xhr.send();
+    // xhr.send();
+
+    fetch('http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3')
+      .then((RESPONSE) => RESPONSE.json())
+      .then((data) => this.setState({ climates: data.list }));
   };
 
   obtenerDia(info) {
