@@ -13,31 +13,32 @@ class Forecasts extends Component {
   };
 
   componentDidMount() {
-    // const xhr = new XMLHttpRequest();
 
-    // xhr.addEventListener('readystatechange', (e) => {
+    const CORS = 'https://cors-anywhere.herokuapp.com';
 
-    //   if (xhr.readyState !== 4) return;
+    const API = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3';
 
-    //   if (xhr.status >= 200 && xhr.status < 300) {
+    const xhr = new XMLHttpRequest();
 
-    //     const data = JSON.parse(xhr.responseText);
+    xhr.addEventListener('readystatechange', (e) => {
 
-    //     this.setState({ climates: data.list });
+      if (xhr.readyState !== 4) return;
 
-    //   } else {
-    //     console.log('error');
-    //   }
-    // });
+      if (xhr.status >= 200 && xhr.status < 300) {
 
-    // xhr.open('GET', 'http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3');
+        const data = JSON.parse(xhr.responseText);
 
-    // xhr.send();
+        this.setState({ climates: data.list });
 
-    // fetch('http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3')
-    fetch('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast/?id=3688685&cnt=3&units=metric&lang=es&appid=52978de41634d1b3bf8b7651bbf071b3')
-      .then((RESPONSE) => RESPONSE.json())
-      .then((data) => this.setState({ climates: data.list }));
+      } else {
+        console.log('error');
+      }
+    });
+
+    xhr.open('GET', `${CORS}/${API}`);
+
+    xhr.send();
+
   };
 
   obtenerDia(info) {
