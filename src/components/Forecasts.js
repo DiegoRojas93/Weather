@@ -9,7 +9,7 @@ class Forecasts extends Component {
     this.state = {
       climates: [],
       isFetch: false,
-      days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      days: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
     };
   };
 
@@ -47,7 +47,7 @@ class Forecasts extends Component {
                 <img src={`http://openweathermap.org/img/wn/${climate.weather[0].icon}@2x.png`} alt='icon' />
               </div>
               <div className='day'>
-                <div className='title'><h2>{this.obtenerDia(climate.dt_txt)}</h2></div>
+                <div className='title'><h3>{this.obtenerDia(climate.dt_txt)}</h3></div>
                 <p>{climate.weather[0].description}</p>
               </div>
             </div>

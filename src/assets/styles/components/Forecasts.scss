@@ -42,9 +42,6 @@
 			align-items: center;
 			border-radius: 1rem;
 
-			& h3{
-				font-size: none;
-			}
 		}
 
 		&__differentiator{
@@ -83,7 +80,7 @@
 		margin: 0;
 	}
 
-	& .day h2{
+	& .day h3{
 		text-align: center;
 		font-weight: 600;
 	}
@@ -92,8 +89,6 @@
 		padding: 1rem;
 	}
 }
-
-
 
 @media screen and (min-width: 1023px) {
 	.title{
@@ -122,8 +117,8 @@
 			align-items: flex-start;
 			justify-content: space-evenly;
 
-			& h2{
-				font-size: 1.3rem;
+			& h3{
+				font-size: 1.072rem;
 				font-weight: 500;
 			}
 
