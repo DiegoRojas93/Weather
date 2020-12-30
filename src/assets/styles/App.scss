@@ -57,10 +57,23 @@ body {
 	&-icon{
 		background-color: $color-terciario;
 		padding: 1rem;
+
+		& figure{
+			text-align: center;
+			padding-bottom: 1rem;
+
+			& figcaption{
+				color: $color-cuaternario;
+			}
+		}
 	}
 
 	&-temperature{
 		background-color: $color-secundario;
+
+		& h1{
+			color: $color-cuaternario;
+		}
 	}
 }
 
@@ -97,7 +110,7 @@ body {
 	.main__information{
 		top: 10vh;
 		left: 5rem;
-		height: 25vh;
+		height: 30vh;
 		width: 15vw;
 		display: flex;
 		flex-direction: column;
@@ -133,9 +146,26 @@ body {
 		width: 8vw;
 		height: 20vh;
 		width: 6vw;
+
+		&-temperature{
+			& h1 {
+				font-size: 1.872rem;
+			}
+		}
 	}
 
 	.banner{
 		height: 50%;
+	}
+}
+
+@media screen and (min-width:1390px){
+
+	.main__information{
+		&-temperature{
+			& h1 {
+				font-size: 3.2rem;
+			}
+		}
 	}
 }

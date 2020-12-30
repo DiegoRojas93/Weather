@@ -85,11 +85,38 @@
 
 		& .title{
 			margin: 0;
+
+			& h3{
+				font-weight: 800;
+			}
 		}
 	}
 }
 
+.data{
+	& span{
+		color: gray;
+		text-align: center;
+	}
+}
+
 @media screen and (min-width: 1023px){
+
+	.data__important{
+		& .general{
+			& .country {
+				& h3{
+					font-size: 1.328rem;
+					font-weight: 700;
+				}
+				& p{
+					font-size: 1.072rem;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
 	.info__locations-container{
 		position: absolute;
 		bottom: 0;

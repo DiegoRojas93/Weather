@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import '../assets/styles/App.scss';
-import banner from '../assets/images/banner__image.jpg';
+// import banner from '../assets/images/banner__image.jpg';
+import banner from '../assets/images/Banner2.jpg';
 
 import Info from '../components/Info';
 
@@ -61,7 +62,10 @@ class App extends Component {
               <section className='main__information'>
                 <article className='main__information-icon'>
 
-                  <img src={`http://openweathermap.org/img/wn/${BogotaWeather.weather[0].icon}@2x.png`} alt='icon' />
+                  <figure>
+                    <img src={`http://openweathermap.org/img/wn/${BogotaWeather.weather[0].icon}@2x.png`} alt='icon' />
+                    <figcaption>{`${BogotaWeather.weather[0].description}`}</figcaption>
+                  </figure>
                 </article>
                 <article className='main__information-temperature'>
                   <h1>{`${BogotaWeather.main.temp} C°`}</h1>
