@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
-import '../assets/styles/App.scss';
-// import banner from '../assets/images/banner__image.jpg';
-import banner from '../assets/images/Banner2.jpg';
+import '@styles/App.scss';
+import banner from '@images/Banner2.jpg';
 
-import Info from '../components/Info';
+import Info from '@components/Info';
 
 class App extends Component {
 
@@ -36,7 +35,9 @@ class App extends Component {
         this.setState({ BogotaWeather: data.list[0], ParisWeather: data.list[1], isFetch: true });
 
       } else {
-        console.log('error');
+        let message = xhr.statusText || 'Ocurrio un Error'
+
+        console.log(`Error ${xhr.status}: ${message}`);
       }
     });
 

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import '../assets/styles/components/Visit.scss';
+import '@styles/components/Visit.scss';
 
-import singopore from '../assets/images/singopore.jpg';
+import singopore from '@images/singopore.jpg';
 
 const Visit = () => (
   <>

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import '../assets/styles/components/Other.scss';
+import '@styles/components/Other.scss';
 
-import images1 from '../assets/images/1.jpg';
-import images2 from '../assets/images/2.jpg';
-import images3 from '../assets/images/3.jpg';
-import museum from '../assets/images/museum.jpg';
-import rosa from '../assets/images/rosa.jpg';
+import images1 from '@images/1.jpg';
+import images2 from '@images/2.jpg';
+import images3 from '@images/3.jpg';
+import museum from '@images/museum.jpg';
+import rosa from '@images/rosa.jpg';
 
 const Other = () => (
   <section className='container__info'>

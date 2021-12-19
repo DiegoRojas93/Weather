@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../assets/styles/components/Forecasts.scss';
+import '@styles/components/Forecasts.scss';
 
 class Forecasts extends Component {
 
@@ -28,10 +28,14 @@ class Forecasts extends Component {
 
         const data = JSON.parse(xhr.responseText);
 
+        console.log(data);
+
         this.setState({ climates: data.list });
 
       } else {
-        console.log('error');
+        let message = xhr.statusText || 'Ocurrio un Error'
+
+        console.log(`Error ${xhr.status}: ${message}`);
       }
     });
 

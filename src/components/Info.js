@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import '../assets/styles/components/Info.scss';
+import '@styles/components/Info.scss';
 
-import Forecasts from './Forecasts';
-import Location from './Location';
-import Visit from './Visit';
-import Other from './Other';
+import Forecasts from '@components/Forecasts';
+import Location from '@components/Location';
+import Visit from '@components/Visit';
+import Other from '@components/Other';
 
 class Info extends Component {
   render() {

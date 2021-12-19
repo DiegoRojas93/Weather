@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import '../assets/styles/components/Location.scss';
+import '@styles/components/Location.scss';
 
-import location from '../assets/images/Location.jpg';
+import location from '@images/Location.jpg';
 
 class Location extends Component {
 
