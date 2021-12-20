@@ -41,7 +41,7 @@ npm install
 
 ## Despliegue 📦
 
-Puedes ver el despliege en el siguente [enlace.](https://diegorojas93.github.io/Weather/index.html "enlace.")
+Antes de ver su despliegue deberas dar clic en el boton de la siguiente [pagina](https://cors-anywhere.herokuapp.com/corsdemo "pagina") para habilitar los CORS, por ultimo podrar ver el proyecto en el siguiente [enlace.](https://diegorojas93.github.io/Weather/index.html "enlace.")
 
 ## Construido con 🛠️
 
